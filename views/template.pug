@@ -1,0 +1,31 @@
+doctype html 
+html
+    head
+        title KarmaLOY
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        //- link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    body
+        nav.navbar.navbar-expand-lg.bg-body-tertiary.rounded(aria-label='Thirteenth navbar example')
+            .container-fluid
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarsExample11' aria-controls='navbarsExample11' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarsExample11.collapse.navbar-collapse.d-lg-flex
+                    a.navbar-brand.col-lg-3.me-0(href='#')
+                        img(src='bower_components/bootstrap/karmahotel-new.png', alt="KARMA", style='width: 100%; height: auto;')
+                    ul.navbar-nav.col-lg-12.justify-content-lg-left
+                        li.nav-item
+                            a.nav-link.active(aria-current='page' href='/') Home
+                        li.nav-item
+                            a.nav-link.active(aria-current='page' href='/articles/add') Book Now
+                .d-lg-flex.col-lg-3.justify-content-lg-end
+                    input.submit.btn-primary(onclick="location.href='/login/';", value="Log In", type="button")
+                    input.submit.btn-primary(onclick="location.href='/signup/';", value="Sign Up", type="button")
+                        
+        .container
+            block content 
+            br
+            hr
+            footer 
+                p CopyRight &copy; Karma  
+        script(src='/bower_components/bootstrap/jquery/dist/jquery.js')        
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')

@@ -1,0 +1,25 @@
+extends template 
+
+block content
+        h1 #{title}
+        form(method='POST', action='/articles/add')
+            #form-group 
+                label FirstName:
+                input.form-control(name='FirstName', type='text')
+            #form-group 
+                label LastName:
+                input.form-control(name='LastName', type='text') 
+            #form-group 
+                label CheckIn:
+                input.form-control(name='CheckIn', type='Date')
+            #form-group 
+                label CheckOut:
+                input.form-control(name='CheckOut', type='Date')    
+            #form-group 
+                label EmailAddress:
+                input.form-control(name='EmailAddress', type='EmailAddress')
+            input.btn.btn-primary(type='submit', value='Submit')
+
+            
+
+

@@ -1,0 +1,12 @@
+extends template 
+
+block content 
+    form(method='POST', action='/login/')
+        #form-group 
+                label Email Address:
+                input.form-control(name='EmailAddress', type='EmailAddress')
+        #form-group 
+                label Password:
+                input.form-control(name='Password', type='Password')
+        input.btn.btn-primary(type='submit', value='Log In')
+    

@@ -1,0 +1,19 @@
+{
+  "name": "karmaloyalty",
+  "version": "1.0.0",
+  "description": "Loyalty",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Bibek Itani",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0",
+    "pug": "^3.0.3"
+  }
+}

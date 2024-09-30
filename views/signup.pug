@@ -1,0 +1,34 @@
+extends template 
+
+block content 
+    h1 #{title}
+    p Add your info and register to earn Karma Points
+    form(method='POST', action='/signup/')
+            #form-group 
+                label First Name:
+                input.form-control(name='FirstName', type='text')
+            #form-group 
+                label Last Name:
+                input.form-control(name='LastName', type='text') 
+            #form-group 
+                label Email Address:
+                input.form-control(name='EmailAddress', type='EmailAddress')
+            #form-group 
+                label Phone Number:
+                input.form-control(name='PhoneNumber', type='tel') 
+            #form-group 
+                label Date of birth:
+                input.form-control(name='DOB', type='Date')
+            #form-group 
+                label Enter your Password:
+                input.form-control(name='Password', type='password')    
+            #form-group 
+                label Nationality:
+                input.form-control(name='Nationality', type='text') 
+            #form-group 
+                label Gender:
+                input.form-control(name='Gender', type='text')
+            #form-group 
+                label Address:
+                input.form-control(name='Address', type='text')
+            input.btn.btn-primary(type='submit', value='Register')
