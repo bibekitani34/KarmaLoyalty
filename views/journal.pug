@@ -1,0 +1,68 @@
+extends template 
+
+block content
+    section.story-section
+        .container
+            .row
+                .col-md-8.left-row
+                    h2.story-title Ghandruk
+                    h4.story-author by Bibek Itani
+                    
+                    hr.dotted-line
+                    p
+                    | Ghandruk, at 1,940 meters (6,364 feet), is a village inside the Annapurna Sanctuary in the Kaski District of the Gandaki Province of Nepal.  This charming village is a cultural gem that offers visitors a unique blend of natural beauty and rich heritage.
+               
+                    
+                    // Two columns for paragraphs inside left section
+                    .row
+                        .col-md-6
+                            p
+                            | Historians believe Mongolians via Tibet entered Nepal and built their settlement at Ghandruk. Historically, Ghandruk has served as a crucial stop on the ancient trading route between Nepal and Tibet. The village has a rich history of Gurkha soldiers who valiantly served in the British and Indian armies, earning a reputation for their bravery and resilience.
+                        .col-md-6
+                            p
+                            | Ghandrukh is not a Gurung word. The word Ghandruk seems to have originated from “Ghana” which means “big” and rukh, which means tree in Nepali. However, “Ghana” can also mean “compact/dense”. It seems the name Ghandrukh is related to rukh (tree). Perhaps there was a giant tree (or trees) by the side of this village when it was founded.
+            
+            
+                .col-md-4
+                    img.img-fluid(src="/bower_components/bootstrap/nepal.avif", alt="Vacancy cover image")
+    hr.dotted-line2
+    section.cards-section
+        .container
+            h2.text-center Previous Episodes
+            .row
+                .col-md-4
+                    .card
+                        img.card-img-top(src="/bower_components/bootstrap/52822624215_7c03f127af_q.jpg", alt="Card Image 1")
+                        .card-body
+                            h5.card-title Latest on Starship IFT5 
+                            p.card-text
+                            | SpaceX says the rocket has been ready to fly since early August, but has had its launch delayed by the FAA to September then late November 2024 due to environmental complaints and a long licensing process.The FAA has reiterated that SpaceX was already issued a license that authorized multiple flights using the same mission profile as flight test 4. We will here more on this very soon.
+
+                .col-md-4
+                    .card
+                        img.card-img-top(src="/bower_components/bootstrap/53859571392_d28efb5a5e_q.jpg", alt="Card Image 2")
+                        .card-body
+                            h5.card-title What a GOAL
+                            p.card-text
+                            | Absolutely stunning from Barcelona's young superstar Yamal, who won the highlights after providing a trivela assist to Raphinha. Raphinha ends up converting that assist to a goal. Lamine Yamal had a notable performance in the UEFA Euro 2024, scoring a goal against France in the semi-finals and providing 4 assists against several teams, including Croatia, Georgia, Germany, and England.
+                .col-md-4
+                    .card
+                        img.card-img-top(src="/bower_components/bootstrap/54045955546_ef6e999221_q.jpg", alt="Card Image 3")
+                        .card-body
+                            h5.card-title Nepal Premier League
+                            p.card-text
+                            | The Nepal Premier League (NPL) (Nepali: नेपाल प्रिमियर लिग), is men's Twenty20 cricket league going to be held annually in Nepal. Founded by the Cricket Association of Nepal (CAN) in 2024, the league features eight provinces/cities based franchise teams. The inaugural season is set to be held from 30 November to 21 December, 2024.[1] The tournament will use a round-robin format, with the top teams advancing to the playoffs.
+    section.subscribe-section
+        .container.sub
+            .row
+                .col-md-8.left-row-sub
+                    h1 Subscribe
+                    p Because your inbox deserves some love too!
+                //- .col-md-4
+                //-     img.img-fluid(src="/bower_components/bootstrap/subscribse.png", alt="Vacancy cover image"  style="width: 50%; height: auto;")
+            form(method='POST', action='/subscribe')
+                .row(style="padding-bottom: 30px;")
+                    .col-md-10
+                        input.form-control(name='EmailAddress', type='EmailAddress', placeholder='Email Address')
+                    .col-md-2 
+                        input.btn.btn-primary(type='submit', value='Subscribe')

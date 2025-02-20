@@ -1,0 +1,92 @@
+extends template 
+
+block content
+    head
+        title Bibek Itani's Resume
+        style.
+            .resume-header {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .section-title {
+                margin-top: 20px;
+                margin-bottom: 15px;
+                font-weight: bold;
+                border-bottom: 2px solid #007bff; /* Bootstrap primary color */
+                padding-bottom: 5px;
+            }
+            .experience-item {
+                margin-bottom: 20px;
+            }
+
+    body
+        .container
+            .resume-header
+                h1.text-center Bibek Itani
+                p.text-center bibekitani34@gmail.com | github.com/bibekitani34
+                    
+            h2.section-title EDUCATION
+            h5 Claflin UNIVERSITY, Orangeburg, SC
+            p Bachelor of Science in Computer Science
+            p Alice Carson Tisdale Honors College, GPA: 3.94
+            p Graduation Date: May 2022
+            h2.section-title RELEVANT COURSES
+            p Fundamentals of Programming, Object Oriented Programming, Data Structures and Algorithm, Computer Organization and Architecture, Discrete Mathematics, Calculus, Linear Algebra, Database Management System, System Analysis and Design, Foundations of Computing, Computer Network, Software Engineering, Robotics Fundamentals, Embedded Systems, Differential Equations
+                
+            h2.section-title PROFESSIONAL EXPERIENCE
+            .experience-item
+                h5 Marketing – Architecture and Infrastructure Team, Delta Air Lines Inc.
+                h6 Jr. DevOps Engineer
+                p June 2022 - Present
+                ul
+                    li Leading the maintenance and ongoing enhancement of automation jobs to support Delta Marketing Operations.
+                    li Creating real-time integrations using API between Salesforce Marketing Cloud, Teradata, SAS, Adobe Experience Platform, and AWS.
+                    li Configuring automated file transfer processes using KSH scripts on a SAS server, implementing secure transfers of SAS-generated files to Amazon S3 or SFTP based on platform requirements.
+                    li Collaborating with internal stakeholders to execute various marketing campaigns as the end-to-end technical Subject Matter Expert.
+                    li Developing and configuring journeys, automated workflows, and email campaigns within the SFMC platform.
+
+            .experience-item
+                h5 In-Flght Services Technology Team, Delta Air Lines Inc.
+                h6 Technology & Innovation Intern
+                p May 2021 – January 2022
+                ul
+                    li Experimented with Onboard Sales data using Machine Learning models to explore upsell opportunities.
+                    li Understood the Flight Attendant Device Refresh Process & noted user experience friction points in that process.
+                    li Created a leader video message portal for Flight Attendants as part of their device unboxing experience to spark a sense of connection with Delta & responsibility of device ownership.
+                    li Predicted meal boarding ratios using Machine Learning to gain insights on what & how much to board.
+
+            .experience-item
+                h5 College of Science, University of Alabama at Huntsville
+                h6 REU Intern
+                p May 2021 - August 2021
+                ul
+                    li Investigated the evolution of magnetic fluctuating energy along the trajectory of the Helios 2 Space Craft.
+                    li Observed turbulence in magnetic field, Elsasser energy, velocity and calculated correlation length  caused due to the variation in solar winds.
+                    li Solved the coupled turbulence transport equations of fluctuating magnetic energy, density, and correlation length and compared the theoretical results with observations using Python's framework (Pandas & NumPy).
+
+            .experience-item
+                h5 School of Natural Science and Mathematics, Claflin University
+                h6 Research Assistant
+                p May 2019 - July 2019
+                ul
+                    li Worked as a research assistant in the project of computing atomic behaviors on Potential Energy Surface
+                    li Designed and constructed the algorithm for the Velocity-Varlet method.
+                    li Created Module and graph of behavior of an atom in a Potential Energy Surface using GNUPLOT and FORTRAN on a LINUX OS, under the advisement of a faculty mentor.
+                    li Generated data for various coordinates required for the graphs and computed Boltzmann's distribution, Newtonian trajectory using GNUPLOT and FORTRAN.
+            h2.section-title SKILLS
+            ul
+                li Languages: PHP, JavaScript, MySQL, Python, Java, SAS
+                li Machine Learning ,braries: TensorFlow, Scikit-Learn, OpenCV
+                li Cloud: AWS Glue, SageMaker, Airflow
+                li Full stack: NodeJS, React, Django, Flask, VueJS
+                li NLP Tools: SpaCy, NLTK
+                li Data Analysis: Pandas, NumPy
+                li Data Visualization: Matplotlib
+                li Platform and Tools: Salesforce Marketing Cloud (SFMC), Adobe Experience Platform (AEP), Control-M
+
+            h2.section-title EXTRACURRICULARS AND HONORS
+            ul
+                li Winner of Google's Virtual Coding Challenge hosted on October 5, 2019
+                li The Alice Carson Honors' Full Ride Scholar, Claflin University
+                li Participant, HackCU, Clemson University
+                li High Performance Computing (HPC) Winter Cluster Competition

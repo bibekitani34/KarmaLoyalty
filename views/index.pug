@@ -4,14 +4,17 @@ block content
         h1 Hi #{title}
         form(method='GET', action='/logout/')
             input.btn.btn-primary(type='submit', value='Logout')
-        ul.navbar-nav.col-lg-3.justify-content-lg-center.ms-auto
-                        li.nav-item.dropdown
-                            a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false' style='font-size: 12px; padding: 5px;') Sort By
-                            ul.dropdown-menu
-                                li
-                                    a.dropdown-item(href='#') First Name
-                                li
-                                    a.dropdown-item(href='#') Last Name 
+        h5 #{checkOutCounts} guests departing today 
+        //- .dropdown-center
+        //-     button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+        //-         select.form-control(name='RoomType' id='RoomType')
+        //-                 option(value='') Sort By
+        //-                 option(value='single') Single
+        //-                 option(value='double') Double
+        //-                 option(value='suite') Suite
+        //-                 option(value='deluxe') Deluxe
+        //-                 option(value='family') Family
+
         //- ul.list-group
         //-     each article, i in articles
         //-         li.list-group-item
@@ -20,26 +23,71 @@ block content
         table.table.table-hover.table-primary
             thead
                 tr
-                th(scope='col') #
-                th(scope='col') Name
-                th(scope='col') Check In
-                th(scope='col') Check Out
-                th(scope='col') Karma Points
-                th(scope='col') Cost 
+                    th(scope='col') #
+                    th(scope='col') Name
+                    th(scope='col') Check In
+                    th(scope='col') Check Out
+                    th(scope='col') Karma Points
+                    th(scope='col') Cost
+                    th(scope='col') Channel
+                    th(scope='col') Room Number
             tbody.table-group-divider
-                each article, i in articles
+                each booking, i in checkOuts
                     tr
-                        th(scope='row')= i+1
+                        th(scope='row')= i + 1
                         td
-                            a(style="text-decoration:none", href="/articles/"+article._id)= article.FirstName + " " + article.LastName
+                            a(style="text-decoration:none", href="/details/" + booking._aid + "/individual/" + booking._id)= booking.FirstName + " " + booking.LastName
                         td
-                            a(style="text-decoration:none", href="/articles/"+article._id)= new Date(article.CheckIn).toDateString()
+                            p #{new Date(booking.CheckIn).toLocaleDateString('en-US', { timeZone: 'EST' })}
                         td
-                            a(style="text-decoration:none", href="/articles/"+article._id)= new Date(article.CheckOut).toDateString()
+                            p #{new Date(booking.CheckOut).toLocaleDateString('en-US', { timeZone: 'EST' })}
                         td
-                            a(style="text-decoration:none", href="/articles/"+article._id)= article.kPoints
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= booking.kPoints
                         td
-                            a(style="text-decoration:none", href="/articles/"+article._id)= "$" + article.Cost
-                        
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= "$" + booking.Cost
+                        td
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= "Internal"
+                        td
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= "$" + booking.Cost
+        h5 #{checkInCounts} guests arriving today 
+        //- .dropdown-center
+        //-     button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+        //-         select.form-control(name='RoomType' id='RoomType')
+        //-                 option(value='') Sort By
+        //-                 option(value='single') Single
+        //-                 option(value='double') Double
+        //-                 option(value='suite') Suite
+        //-                 option(value='deluxe') Deluxe
+        //-                 option(value='family') Family
 
-                        
+        //- ul.list-group
+        //-     each article, i in articles
+        //-         li.list-group-item
+        //-             a(href="/articles/"+article._id)= article.FirstName
+
+        table.table.table-hover.table-primary
+            thead
+                tr
+                    th(scope='col') #
+                    th(scope='col') Name
+                    th(scope='col') Check In
+                    th(scope='col') Check Out
+                    th(scope='col') Karma Points
+                    th(scope='col') Cost
+                    th(scope='col') Channel
+            tbody.table-group-divider
+                each booking, i in checkIns
+                    tr
+                        th(scope='row')= i + 1
+                        td
+                            a(style="text-decoration:none", href="/details/" + booking._aid + "/individual/" + booking._id)= booking.FirstName + " " + booking.LastName
+                        td
+                            p #{new Date(booking.CheckIn).toLocaleDateString('en-US', { timeZone: 'EST' })}
+                        td
+                           p #{new Date(booking.CheckOut).toLocaleDateString('en-US', { timeZone: 'EST' })}
+                        td
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= booking.kPoints
+                        td
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= "$" + booking.Cost
+                        td
+                            a(style="text-decoration:none", href="/articles/"+booking._id)= "Internal"

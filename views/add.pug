@@ -18,6 +18,26 @@ block content
             #form-group 
                 label EmailAddress:
                 input.form-control(name='EmailAddress', type='EmailAddress')
+            #form-group 
+                label Phone Number:
+                input.form-control(name='PhoneNumber', type='tel')
+            #form-group 
+                label Number of Guests:
+                input.form-control(name='NOG', type='Number')
+            #form-group
+                label(for='RoomType') Room Type:
+                select.form-control(name='RoomType' id='RoomType')
+                    option(value='') -- Select a Room Type --
+                    option(value='single') Single
+                    option(value='double') Double
+                    option(value='suite') Suite
+                    option(value='deluxe') Deluxe
+                    option(value='family') Family
+            #form-group 
+                 label
+                 input(type="checkbox" name="optIn" value="yes")
+                 |  I have read the
+                 a(href="/terms" target="_blank") terms and conditions
             input.btn.btn-primary(type='submit', value='Submit')
 
             

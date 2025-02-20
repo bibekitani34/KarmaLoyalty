@@ -1,63 +1,26 @@
 const { ObjectId } = require('mongodb');
 let mongoose = require('mongoose');
+const multer = require('multer');
+const path = require('path');
 
-//Article Schema
-let userSchema = mongoose.Schema({
-    // _id:{
-    //     type: ObjectId,
-    //     required:true
-    // },
-    FirstName: {
+//Journal Schema
+let journalSchema = mongoose.Schema({
+    Author: {
         type: String,
         required: true
     },
-    LastName: {
+    Title:{
         type: String,
         required: true
     },
-    DOB: {
-        type: Date,
-        required: true
-    },
-    EmailAddress:{
-        type: String,
-        required: true
-    },
-    isMember:{
-        type: String,
-        required:false,
-        default: "Yes"
-    },
-    PhoneNumber:{
-        type: Number,
-        required:false,
-        default: 0
-    },
-    kPoints:{
-        type: Number,
-        required:false,
-        default: 0
-    },
-    LoginType:{
-        type: String,
-        required:true,
-        default: "Member"
-    },
-    Nationality:{
+    JournalBody:{
         type: String,
         required:true
     },
-    Gender:{
-        type: String,
-        required:true
-    },
-    Password:{
-        type: String,
-        require:true
-    },
-    Address:{
-        type: String,
-        required:true
+    Image:{
+        filename: String,
+        contentType: String,
+        image: Buffer
     },
     createdDate:{
         type: Date,
@@ -66,4 +29,4 @@ let userSchema = mongoose.Schema({
     }
 });
 
-let Article = module.exports = mongoose.model('User', userSchema, 'users');
+let Journal = module.exports = mongoose.model('Journal', journalSchema, 'journals');
